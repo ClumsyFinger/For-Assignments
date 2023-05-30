@@ -22,9 +22,9 @@ Mahindra_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap
     head_mahindra1 <- Mahindra_page %>% html_nodes("thead") %>% .[4] %>% html_table() %>% .[[1]]    
 
     Mahindra_table <- rbind(body_mahindra1,body_mahindra2)    
-    mahindra_colnames <- c(head_mahindra1[1,])
+      mahindra_colnames <- c(head_mahindra1[1,])
     mahindra_colnames <- unlist(mahindra_colnames)    
-    colnames(Mahindra_table) <- mahindra_colnames
+      colnames(Mahindra_table) <- mahindra_colnames
 Mahindra_table <- Mahindra_table[,-12]
   
 View(Mahindra_table)
@@ -33,11 +33,12 @@ View(Mahindra_table)
   
     body_wipro1 <- wipro_page %>% html_nodes("tbody") %>% .[2] %>% html_table() %>% .[[1]]
     body_wipro2 <- wipro_page %>% html_nodes("tbody") %>% .[4] %>% html_table() %>% .[[1]]
-    wipro_table <- rbind(body_wipro1,body_wipro2)
-    head_wipro1 <- wipro_page %>% html_nodes("thead") %>% .[4] %>% html_table() %>% .[[1]]
-    col_wipro <- c(head_wipro1[1,])
-    col_wipro <- unlist(col_wipro)
-    col_wipro[1] <- c(" ")
+ wipro_table <- rbind(body_wipro1,body_wipro2)
+   
+      head_wipro1 <- wipro_page %>% html_nodes("thead") %>% .[4] %>% html_table() %>% .[[1]]
+      col_wipro <- c(head_wipro1[1,])
+      col_wipro <- unlist(col_wipro)
+      col_wipro[1] <- c(" ")
   
     colnames(wipro_table) <- col_wipro
   wipro_table <- wipro_table[,-12]
@@ -72,13 +73,13 @@ Reliance_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap
 View(Reliance_table)    
 #################################### For TITAN #############################
 Titan_Page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/consumer-durables/diamond-jewellery/titan-co/company-info")
-    
+        
+     
         body_Titan1 <- Titan_Page %>% html_nodes("tbody") %>% .[2] %>% html_table() %>% .[[1]]
         body_Titan2 <- Titan_Page %>% html_nodes("tbody") %>% .[4] %>% html_table() %>% .[[1]]
-        head_Titan <-  Titan_Page %>% html_nodes("thead") %>% .[4] %>% html_table() %>% .[[1]]      
-    
+        head_Titan <-  Titan_Page %>% html_nodes("thead") %>% .[4] %>% html_table() %>% .[[1]]   
       Titan_table <- rbind(body_Titan1,body_Titan2)
-        Titan_table <- Titan_table[,-12]    
+         Titan_table <- Titan_table[,-12]     
       Titan_colnames <- c(head_Titan[1,])      
         Titan_colnames <- unlist(Titan_colnames)    
       colnames(Titan_table) <- Titan_colnames  
