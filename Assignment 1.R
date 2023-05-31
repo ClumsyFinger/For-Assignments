@@ -28,6 +28,7 @@ Mahindra_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap
 Mahindra_table <- Mahindra_table[,-12]
   
 View(Mahindra_table)
+
 ############## for Wipro ###############################################################
  wipro_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/it-ites/it-software/wipro/company-info")
   
@@ -44,6 +45,7 @@ View(Mahindra_table)
   wipro_table <- wipro_table[,-12]
  
 View(wipro_table)
+
 ########### FOR INFOSYS ############################################## 
   
 Infosys_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/it-ites/it-software/infosys/company-info")
@@ -57,7 +59,8 @@ Infosys_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/
     Infosys_colnames <- c(head_Infosys[1,])
       Infosys_colnames <- unlist(Infosys_colnames)    
     colnames(Infosys_table) <- Infosys_colnames
-View(Infosys_table)    
+View(Infosys_table)
+
 ################ FOR RELAINCE #############################################
 Reliance_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/oil-gas/refineries/reliance-industries/company-info")
     
@@ -70,7 +73,8 @@ Reliance_page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap
       Reliance_colnames <- c(head_Reliance[1,])
         Reliance_colnames <- unlist(Reliance_colnames)
       colnames(Reliance_table) <- Reliance_colnames  
-View(Reliance_table)    
+View(Reliance_table) 
+
 #################################### For TITAN #############################
 Titan_Page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/consumer-durables/diamond-jewellery/titan-co/company-info")
         
@@ -84,6 +88,7 @@ Titan_Page <- read_html("https://www.moneyworks4me.com/indianstocks/large-cap/co
         Titan_colnames <- unlist(Titan_colnames)    
       colnames(Titan_table) <- Titan_colnames  
 View(Titan_table)
+
 ########### Question C ######################################################################################
 tennis <- function(p) {
   # Simulate the tennis match
@@ -100,7 +105,7 @@ for (i in 1:1000) {
 }
 
 ans <- mean(matches)
-
+ans
 
 
 ############## Question D ###############################################################################
