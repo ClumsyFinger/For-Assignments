@@ -32,7 +32,7 @@ flip <- function(image) {
   return(flipped_image)
 }
 
-#Taking example of the image dog.jpeg
+#Taking example of the image dog.jpeg (if dog.jpeg is set in your working directory)
 dog <- load.image("dog.jpeg")
 par(mfrow = c(1,2))
 plot(dog, main = "Original Image")
